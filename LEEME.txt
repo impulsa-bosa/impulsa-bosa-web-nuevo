@@ -1,0 +1,25 @@
+IMPULSA BOSA - INSTRUCCIONES PARA PUBLICAR EN GITHUB PAGES
+
+Este proyecto es un sitio de UN SOLO ARCHIVO: index.html contiene los estilos,
+los scripts y el icono. No depende de carpetas ni rutas, asi que no puede
+romperse por subir los archivos "sueltos".
+
+PASOS
+1. Descomprime este ZIP. Veras: index.html, .nojekyll y LEEME.txt.
+2. Entra a https://github.com/impulsa-bosa/impulsa-bosa
+3. Borra los archivos viejos del repositorio: styles.css, main.js,
+   favicon.svg, impulsa-bosa.zip y el index.html anterior
+   (abre cada archivo > icono de papelera > "Commit changes").
+4. Pulsa "Add file" > "Upload files" y arrastra index.html (y .nojekyll si tu
+   sistema lo muestra; es opcional). Pulsa "Commit changes".
+5. Ve a Settings > Pages. En "Branch" elige "main" y la carpeta "/ (root)".
+   Guarda.
+6. Espera 1-2 minutos y abre https://impulsa-bosa.github.io/impulsa-bosa/
+   Si ves la version anterior, recarga con Ctrl+F5 (o Cmd+Shift+R).
+
+NOTAS
+- index.html debe quedar en la RAIZ del repositorio (no dentro de una carpeta).
+- Las tipografias (DM Sans y Plus Jakarta Sans) se cargan desde Google Fonts;
+  si no hubiera internet, el sitio usa la tipografia del sistema y se ve bien.
+- El formulario abre el programa de correo del visitante con el mensaje listo
+  para enviar a impulsabosa@gmail.com.

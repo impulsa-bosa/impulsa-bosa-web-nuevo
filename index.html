@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impulsa Bosa | Marketing Local</title>
+<meta name="description" content="Impulsa Bosa - Marketing digital accesible para pequeños negocios de Bosa y Bogotá.">
+<meta name="theme-color" content="#102544">
+<link rel="canonical" href="https://impulsa-bosa.github.io/impulsa-bosa/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%20%3Cdefs%3E%20%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%221%22%20y2=%221%22%3E%20%3Cstop%20offset=%220%22%20stop-color=%22%23102544%22/%3E%20%3Cstop%20offset=%221%22%20stop-color=%22%232166a7%22/%3E%20%3C/linearGradient%3E%20%3C/defs%3E%20%3Crect%20width=%2264%22%20height=%2264%22%20rx=%2216%22%20fill=%22url%28%23g%29%22/%3E%20%3Cpath%20d=%22M18%2044V22h6v22zM30%2044V22h8.5c5%200%207.5%202.4%207.5%206.2%200%202.4-1.2%204.2-3.2%205.1%202.5.8%204%202.7%204%205.5%200%204-3%205.2-8%205.2zm6-13h2.2c1.6%200%202.4-.7%202.4-2s-.8-2-2.4-2H36zm0%208.6h2.8c1.8%200%202.8-.7%202.8-2.2s-1-2.2-2.8-2.2H36z%22%20fill=%22%23ffb914%22/%3E%20%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Impulsa Bosa | Marketing Local">
+<meta property="og:description" content="Marketing digital accesible para pequeños negocios de Bosa y Bogotá.">
+<meta property="og:url" content="https://impulsa-bosa.github.io/impulsa-bosa/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   Impulsa Bosa · Hoja de estilos
+   ========================================================== */
+
+:root {
+  --navy-900: #0b182a;
+  --navy-800: #102544;
+  --navy-700: #173761;
+  --blue-600: #1f5d91;
+  --cyan: #17b8d0;
+  --yellow: #ffb914;
+  --yellow-ink: #b87800;     /* amarillo legible sobre fondo claro */
+  --bg: #f7f9fc;
+  --bg-sky: #eef7fd;
+  --ink: #17243a;
+  --muted: #5b6b80;
+  --line: #e3e9f1;
+  --white: #fff;
+  --green: #1f9d57;
+
+  --radius: 18px;
+  --radius-lg: 26px;
+  --shadow-sm: 0 2px 10px rgba(16, 37, 68, .06);
+  --shadow-md: 0 14px 34px rgba(16, 37, 68, .10);
+  --shadow-lg: 0 28px 60px rgba(16, 37, 68, .18);
+  --font-display: "Plus Jakarta Sans", "DM Sans", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease: cubic-bezier(.22, .8, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.65;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button, input, textarea { font: inherit; color: inherit; }
+
+.container { width: min(1180px, 100% - 48px); margin-inline: auto; }
+
+:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+
+.skip-link {
+  position: absolute; left: 16px; top: -60px; z-index: 200;
+  background: var(--navy-800); color: #fff; padding: 10px 16px; border-radius: 10px; font-weight: 700;
+  transition: top .2s;
+}
+.skip-link:focus { top: 12px; }
+
+.icon { width: 1.25em; height: 1.25em; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* ---------- Tipografía de secciones ---------- */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase;
+  color: var(--yellow-ink); margin-bottom: 14px;
+}
+.eyebrow::before { content: ""; width: 26px; height: 2px; background: currentColor; border-radius: 2px; }
+.eyebrow.on-dark { color: var(--yellow); }
+
+.section-title {
+  font: 800 clamp(30px, 3.8vw, 46px)/1.12 var(--font-display);
+  letter-spacing: -1.2px; color: var(--navy-800);
+}
+.section-title em { font-style: normal; color: var(--yellow-ink); }
+.section-desc { color: var(--muted); margin-top: 16px; max-width: 640px; font-size: 17px; }
+.section { padding: clamp(68px, 9vw, 108px) 0; }
+.section-head { max-width: 720px; }
+.section-head.center { text-align: center; margin-inline: auto; }
+.section-head.center .section-desc { margin-inline: auto; }
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 14px 24px; border-radius: 14px; border: 2px solid transparent;
+  font-weight: 800; font-size: 15px; cursor: pointer;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .2s, color .2s, border-color .2s;
+}
+.btn .icon { width: 1.1em; height: 1.1em; transition: transform .25s var(--ease); }
+.btn:hover { transform: translateY(-2px); }
+.btn:hover .icon-arrow { transform: translateX(4px); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background: var(--yellow); color: var(--navy-800); box-shadow: 0 10px 24px rgba(255, 185, 20, .35); }
+.btn-primary:hover { box-shadow: 0 14px 30px rgba(255, 185, 20, .45); }
+.btn-dark { background: var(--navy-800); color: #fff; box-shadow: 0 10px 24px rgba(16, 37, 68, .25); }
+.btn-ghost { background: transparent; color: var(--navy-800); border-color: var(--line); background: #fff; }
+.btn-ghost:hover { border-color: var(--navy-800); }
+.btn-outline-light { color: #fff; border-color: rgba(255, 255, 255, .35); }
+.btn-outline-light:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, .86);
+  backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .25s, box-shadow .25s;
+}
+.site-header.scrolled { border-color: var(--line); box-shadow: 0 6px 24px rgba(16, 37, 68, .06); }
+.navbar { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+
+.logo { display: flex; align-items: center; gap: 12px; font: 800 20px var(--font-display); color: var(--navy-800); line-height: 1.1; }
+.logo-mark {
+  width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+  background: linear-gradient(145deg, var(--navy-800), #2166a7); color: var(--yellow);
+  font-weight: 800; font-size: 17px; box-shadow: 0 8px 18px rgba(16, 37, 68, .22);
+}
+.logo small { display: block; font: 700 9.5px var(--font-body); letter-spacing: 1.3px; color: #52647c; margin-top: 3px; }
+
+.nav-links { display: flex; align-items: center; gap: 6px; }
+.nav-links a:not(.nav-cta) {
+  position: relative; padding: 8px 12px; font-size: 14px; font-weight: 700; color: #2a3c57; border-radius: 10px;
+  transition: color .2s, background .2s;
+}
+.nav-links a:not(.nav-cta):hover { color: var(--navy-800); background: var(--bg); }
+.nav-links a.active:not(.nav-cta)::after {
+  content: ""; position: absolute; left: 12px; right: 12px; bottom: 2px; height: 2px; background: var(--yellow); border-radius: 2px;
+}
+.nav-cta {
+  margin-left: 10px; background: var(--yellow); color: var(--navy-800); font-weight: 800; font-size: 14px;
+  padding: 11px 20px; border-radius: 999px; box-shadow: 0 8px 20px rgba(255, 185, 20, .35);
+  transition: transform .25s var(--ease), box-shadow .25s;
+}
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(255, 185, 20, .45); }
+
+.menu-toggle { display: none; width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--line); background: #fff; cursor: pointer; place-items: center; }
+.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+  display: block; width: 20px; height: 2px; background: var(--navy-800); border-radius: 2px; position: relative; transition: transform .3s var(--ease), background .2s;
+}
+.menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+.menu-toggle span::before { top: -6px; }
+.menu-toggle span::after { top: 6px; }
+.menu-toggle[aria-expanded="true"] span { background: transparent; }
+.menu-toggle[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(900px 500px at 88% 8%, #dff1ff 0, transparent 60%),
+    radial-gradient(600px 400px at 0% 100%, #fff6dc 0, transparent 60%),
+    linear-gradient(180deg, #f6fbff, #fff);
+  padding: clamp(44px, 6vw, 84px) 0 clamp(90px, 10vw, 130px);
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+  background-image: radial-gradient(#c5d8ea 1.2px, transparent 1.2px); background-size: 26px 26px;
+  mask-image: linear-gradient(120deg, transparent 35%, #000 100%); -webkit-mask-image: linear-gradient(120deg, transparent 35%, #000 100%);
+}
+.hero-grid { position: relative; display: grid; grid-template-columns: 1.02fr .98fr; gap: 40px; align-items: center; }
+.kicker {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px;
+  background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+  font-size: 12px; font-weight: 800; letter-spacing: 1.3px; color: #1d5e9e; margin-bottom: 22px;
+}
+.kicker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(31, 157, 87, .18); }
+.hero h1 { font: 800 clamp(40px, 5.4vw, 66px)/1.05 var(--font-display); letter-spacing: -2.4px; color: var(--navy-800); }
+.hero h1 .hl {
+  background: linear-gradient(transparent 62%, rgba(255, 185, 20, .55) 62% 92%, transparent 92%);
+  padding: 0 4px; margin: 0 -4px;
+}
+.hero-lead { font-size: 19px; color: #51627a; max-width: 560px; margin: 24px 0 32px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-stats { display: flex; gap: 14px; margin-top: 42px; flex-wrap: wrap; }
+.stat {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(255, 255, 255, .8);
+  border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-sm);
+}
+.stat .icon { width: 22px; height: 22px; color: var(--blue-600); }
+.stat strong { display: block; font: 800 18px/1.2 var(--font-display); color: var(--navy-800); }
+.stat small { display: block; color: #667a90; font-size: 12px; }
+
+.hero-visual { position: relative; display: grid; place-items: center; }
+.hero-visual svg { width: 100%; max-width: 540px; height: auto; filter: drop-shadow(0 30px 40px rgba(16, 37, 68, .12)); }
+.float-a { animation: float 6s ease-in-out infinite; }
+.float-b { animation: float 7s ease-in-out -2s infinite; }
+.float-c { animation: float 8s ease-in-out -4s infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+/* ---------- Franja de promesa ---------- */
+.promise { position: relative; z-index: 5; margin-top: -58px; }
+.promise-card {
+  background: var(--navy-800); color: #fff; border-radius: var(--radius-lg); padding: 28px 38px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px; box-shadow: var(--shadow-lg);
+  background-image: radial-gradient(500px 200px at 100% 0, rgba(23, 184, 208, .25), transparent 70%);
+}
+.promise-item { display: flex; align-items: center; gap: 18px; }
+.round { width: 54px; height: 54px; flex: none; border-radius: 16px; background: rgba(255, 255, 255, .1); color: var(--yellow); display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, .14); }
+.round .icon { width: 26px; height: 26px; }
+.promise h3 { font: 800 19px var(--font-display); }
+.promise p { font-size: 14.5px; color: #c4d1e2; margin-top: 2px; }
+
+/* ---------- Quiénes somos ---------- */
+.about-grid { display: grid; grid-template-columns: .9fr 1.4fr; gap: 56px; align-items: start; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card {
+  border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; background: #fff; box-shadow: var(--shadow-sm);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: #cfdcec; }
+.card-icon { width: 52px; height: 52px; border-radius: 15px; display: grid; place-items: center; background: #eaf4ff; color: var(--blue-600); margin-bottom: 18px; }
+.card-icon.warm { background: #fff4d6; color: var(--yellow-ink); }
+.card-icon.cool { background: #e2f8fb; color: #0e8fa3; }
+.card h3 { font: 800 19px var(--font-display); color: var(--navy-800); margin-bottom: 8px; }
+.card p { font-size: 15px; color: var(--muted); }
+.values li { display: flex; align-items: center; gap: 9px; font-size: 15px; margin: 8px 0; color: #3f5068; font-weight: 500; }
+.values .icon { width: 17px; height: 17px; color: var(--green); stroke-width: 2.4; }
+
+/* ---------- Problema ---------- */
+.problem { background: var(--bg); }
+.problem-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; }
+.problem-list { margin-top: 28px; display: grid; gap: 12px; }
+.problem-item {
+  display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid var(--line);
+  padding: 15px 18px; border-radius: 14px; font-weight: 600; font-size: 15.5px; color: #2b3d57;
+  transition: transform .25s var(--ease), box-shadow .25s;
+}
+.problem-item:hover { transform: translateX(6px); box-shadow: var(--shadow-sm); }
+.problem-item b { font: 800 13px var(--font-display); color: var(--yellow-ink); background: #fff4d6; border-radius: 9px; padding: 6px 9px; }
+
+.gap-card { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 34px; box-shadow: var(--shadow-md); }
+.gap-card h3 { font: 800 22px/1.25 var(--font-display); color: var(--navy-800); margin-bottom: 8px; }
+.gap-card > p { color: var(--muted); font-size: 15.5px; }
+.gap-flow { display: grid; gap: 0; margin-top: 26px; }
+.gap-row { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-top: 1px dashed var(--line); font-weight: 700; font-size: 15px; color: var(--navy-800); }
+.gap-row:first-child { border-top: 0; }
+.gap-row .icon { width: 22px; height: 22px; color: var(--blue-600); }
+.gap-row.bad .icon { color: #d4574b; }
+.gap-row.good .icon { color: var(--green); }
+.gap-row span.tag { margin-left: auto; font-size: 11.5px; letter-spacing: .6px; text-transform: uppercase; color: #7a8aa0; font-weight: 800; }
+
+/* ---------- Qué hacemos ---------- */
+.solution {
+  position: relative; overflow: hidden; margin-top: 44px;
+  background: linear-gradient(135deg, var(--navy-800), #1c4e7d); color: #fff; border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 56px); display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; box-shadow: var(--shadow-lg);
+}
+.solution::after { content: ""; position: absolute; right: -90px; top: -90px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(23, 184, 208, .35), transparent 70%); }
+.solution > * { position: relative; z-index: 1; }
+.solution h3 { font: 800 clamp(24px, 3vw, 34px)/1.2 var(--font-display); letter-spacing: -.6px; margin-bottom: 14px; }
+.solution p { color: #cbd7e6; font-size: 16.5px; }
+.pill { display: inline-flex; align-items: center; gap: 10px; margin-top: 24px; padding: 11px 16px; border: 1px solid rgba(255, 255, 255, .22); border-radius: 12px; font-size: 14px; font-weight: 600; background: rgba(255, 255, 255, .06); }
+.pill .icon { color: var(--yellow); }
+.how-list { display: grid; gap: 12px; }
+.how-item { display: flex; align-items: center; gap: 14px; padding: 15px 18px; border-radius: 16px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .12); backdrop-filter: blur(4px); font-weight: 700; }
+.how-item .icon { color: var(--yellow); width: 24px; height: 24px; }
+.how-item small { display: block; color: #b9c8db; font-weight: 500; font-size: 13px; }
+
+/* ---------- Servicios ---------- */
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; align-items: stretch; }
+.service {
+  position: relative; border: 1px solid var(--line); border-radius: 22px; padding: 34px 30px; background: #fff;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
+}
+.service:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: #cfdcec; }
+.service.featured { background: linear-gradient(150deg, var(--navy-800), #1c4e7d); color: #fff; border: 0; box-shadow: var(--shadow-lg); }
+.service.featured:hover { transform: translateY(-6px); }
+.service-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+.service-icon { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; background: #eaf4ff; color: var(--blue-600); }
+.service-icon .icon { width: 26px; height: 26px; }
+.featured .service-icon { background: rgba(255, 255, 255, .12); color: var(--yellow); }
+.number { font: 800 14px var(--font-display); color: #b3c0d1; letter-spacing: 1px; }
+.featured .number { color: rgba(255, 255, 255, .45); }
+.service h3 { font: 800 22px var(--font-display); margin-bottom: 10px; color: var(--navy-800); }
+.featured h3 { color: #fff; }
+.service > p { font-size: 15.5px; color: var(--muted); }
+.featured > p { color: #d0dbe9; }
+.service ul { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.featured ul { border-color: rgba(255, 255, 255, .18); }
+.service li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; margin: 10px 0; color: #3f5068; font-weight: 500; }
+.featured li { color: #e5ecf5; }
+.service li .icon { width: 17px; height: 17px; color: var(--green); stroke-width: 2.4; }
+.featured li .icon { color: var(--yellow); }
+.service-note { text-align: center; margin-top: 30px; color: var(--muted); font-size: 15px; }
+
+/* ---------- A quién ayudamos ---------- */
+.audience { background: var(--bg-sky); }
+.audience-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 60px; align-items: center; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.tag-chip {
+  display: inline-flex; align-items: center; gap: 9px; background: #fff; border: 1px solid #d5e8f4; border-radius: 999px;
+  padding: 10px 16px; font-size: 14px; font-weight: 700; color: var(--navy-800);
+  transition: transform .25s var(--ease), box-shadow .25s, border-color .25s;
+}
+.tag-chip .icon { width: 18px; height: 18px; color: var(--blue-600); }
+.tag-chip:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--cyan); }
+.target { position: relative; background: #fff; border-radius: var(--radius-lg); padding: 36px 30px; text-align: center; box-shadow: var(--shadow-md); }
+.target-pin { width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 50%; background: #fff4d6; color: var(--yellow-ink); display: grid; place-items: center; position: relative; }
+.target-pin::after { content: ""; position: absolute; inset: -8px; border-radius: 50%; border: 2px solid rgba(255, 185, 20, .45); animation: ping 2.4s ease-out infinite; }
+@keyframes ping { 0% { transform: scale(.85); opacity: 1; } 100% { transform: scale(1.35); opacity: 0; } }
+.target-pin .icon { width: 30px; height: 30px; }
+.target h3 { font-size: 12px; letter-spacing: 1.4px; color: #67768a; }
+.target strong { font: 800 26px var(--font-display); display: block; color: var(--navy-800); margin-top: 4px; }
+.target p { font-size: 14px; color: var(--muted); margin-top: 10px; }
+
+/* ---------- Proceso ---------- */
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 56px; position: relative; }
+.process::before { content: ""; position: absolute; top: 27px; left: 8%; right: 8%; height: 2px; background: repeating-linear-gradient(90deg, #cfdcec 0 8px, transparent 8px 16px); }
+.step { position: relative; text-align: center; padding: 0 6px; }
+.step b {
+  position: relative; z-index: 1; display: grid; place-items: center; width: 56px; height: 56px; margin: 0 auto 20px; border-radius: 50%;
+  background: var(--yellow); color: var(--navy-800); font: 800 20px var(--font-display); box-shadow: 0 0 0 7px #fff, 0 10px 22px rgba(255, 185, 20, .4);
+  transition: transform .3s var(--ease);
+}
+.step:hover b { transform: scale(1.1) rotate(-4deg); }
+.step h3 { font: 800 19px var(--font-display); color: var(--navy-800); }
+.step p { font-size: 15px; color: var(--muted); margin-top: 6px; }
+
+.metrics { margin-top: 70px; background: var(--navy-800); color: #fff; border-radius: var(--radius-lg); padding: 38px 40px; box-shadow: var(--shadow-lg); }
+.metrics-title { font-size: 13px; letter-spacing: 1.4px; font-weight: 800; color: var(--yellow); text-transform: uppercase; margin-bottom: 22px; }
+.metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.metric { padding-left: 16px; border-left: 3px solid var(--yellow); }
+.metric strong { display: block; font: 800 22px var(--font-display); }
+.metric span { font-size: 14px; color: #bccadc; display: block; margin-top: 4px; line-height: 1.5; }
+
+/* ---------- Por qué ---------- */
+.why { background: var(--bg); }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.why-copy p { color: var(--muted); font-size: 17px; margin-bottom: 18px; }
+.why-copy p:last-child { margin-bottom: 0; }
+.why-copy { border-left: 3px solid var(--yellow); padding-left: 28px; }
+
+/* ---------- Contacto ---------- */
+.contact { padding-bottom: clamp(68px, 9vw, 108px); }
+.contact-card {
+  position: relative; overflow: hidden; border-radius: 30px; padding: clamp(32px, 5vw, 60px);
+  background: linear-gradient(125deg, var(--navy-800), var(--blue-600)); color: #fff;
+  display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; box-shadow: var(--shadow-lg);
+}
+.contact-card::before { content: ""; position: absolute; left: -120px; bottom: -140px; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 185, 20, .28), transparent 70%); }
+.contact-card > * { position: relative; z-index: 1; }
+.contact-copy h2 { font: 800 clamp(30px, 3.6vw, 42px)/1.12 var(--font-display); letter-spacing: -1px; }
+.contact-copy > p { color: #d3deec; margin-top: 14px; font-size: 17px; }
+.contact-mail { display: flex; align-items: center; gap: 14px; margin-top: 28px; padding: 14px 16px; border-radius: 16px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .16); }
+.contact-mail .round { width: 46px; height: 46px; border-radius: 13px; }
+.contact-mail small { display: block; color: #b9c8db; font-size: 12px; }
+.contact-mail a { font-weight: 800; font-size: 16px; word-break: break-all; }
+.copy-btn { margin-left: auto; flex: none; display: inline-flex; align-items: center; gap: 7px; padding: 9px 13px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, .3); background: transparent; color: #fff; font-weight: 700; font-size: 13px; cursor: pointer; transition: background .2s, border-color .2s; }
+.copy-btn:hover { background: rgba(255, 255, 255, .12); border-color: #fff; }
+.copy-btn .icon { width: 16px; height: 16px; }
+
+.form { background: #fff; color: var(--ink); border-radius: 22px; padding: 30px; box-shadow: 0 24px 50px rgba(5, 15, 30, .3); }
+.form h3 { font: 800 20px var(--font-display); color: var(--navy-800); }
+.form > p { font-size: 14px; color: var(--muted); margin: 4px 0 20px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 13px; font-weight: 700; color: #33465f; margin-bottom: 6px; }
+.field input, .field textarea {
+  width: 100%; padding: 13px 14px; border-radius: 12px; border: 1.5px solid #d7e0ec; background: #fbfcfe; font-size: 15px;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.field textarea { min-height: 108px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--cyan); background: #fff; box-shadow: 0 0 0 4px rgba(23, 184, 208, .16); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form .btn { width: 100%; margin-top: 6px; }
+.form-note { font-size: 12.5px; color: #7a8aa0; margin-top: 12px; text-align: center; }
+.form-status { min-height: 20px; font-size: 13.5px; font-weight: 700; text-align: center; margin-top: 10px; color: var(--green); }
+.form-status.error { color: #c2410c; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--navy-900); color: #fff; padding: 54px 0 28px; }
+.footer-grid { display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; flex-wrap: wrap; }
+.site-footer .logo { color: #fff; }
+.site-footer .logo small { color: #8fa0b5; }
+.footer-brand p { color: #8fa0b5; font-size: 14px; margin-top: 14px; max-width: 320px; }
+.footer-links { display: flex; gap: 6px 24px; flex-wrap: wrap; font-size: 14px; font-weight: 600; color: #c0cddd; }
+.footer-links a:hover { color: var(--yellow); }
+.copy { border-top: 1px solid rgba(255, 255, 255, .1); margin-top: 36px; padding-top: 22px; color: #7a8ea6; font-size: 13px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+.to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 90; width: 48px; height: 48px; border-radius: 14px; border: 0; cursor: pointer;
+  background: var(--navy-800); color: var(--yellow); display: grid; place-items: center; box-shadow: var(--shadow-md);
+  opacity: 0; transform: translateY(14px); pointer-events: none; transition: opacity .3s, transform .3s var(--ease);
+}
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { background: var(--navy-700); }
+
+/* ---------- Animaciones de entrada ---------- */
+.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0s); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1020px) {
+  .about-grid, .problem-grid, .audience-grid, .why-grid, .solution, .contact-card { grid-template-columns: 1fr; gap: 40px; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; max-width: 460px; margin-inline: auto; }
+  .process { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+  .process::before { display: none; }
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .menu-toggle { display: grid; }
+  .nav-links {
+    position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 4px;
+    background: #fff; padding: 14px 24px 22px; border-bottom: 1px solid var(--line); box-shadow: 0 20px 30px rgba(16, 37, 68, .1);
+    opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .25s, transform .25s var(--ease), visibility .25s;
+  }
+  .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+  .nav-links a:not(.nav-cta) { padding: 13px 12px; font-size: 16px; }
+  .nav-links a.active:not(.nav-cta)::after { display: none; }
+  .nav-links a.active:not(.nav-cta) { background: var(--bg); }
+  .nav-cta { margin: 10px 0 0; text-align: center; padding: 14px 20px; }
+  .cards { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: 1fr; }
+  .promise-card { grid-template-columns: 1fr; padding: 26px; }
+}
+
+@media (max-width: 560px) {
+  .container { width: min(1180px, 100% - 36px); }
+  .hero-actions .btn { width: 100%; }
+  .stat { flex: 1 1 100%; }
+  .process { grid-template-columns: 1fr; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .metrics { padding: 30px 24px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .form { padding: 24px 20px; }
+  .contact-mail { flex-wrap: wrap; }
+  .copy-btn { margin-left: 0; }
+  .logo small { font-size: 8.5px; letter-spacing: 1px; }
+  .logo { font-size: 18px; }
+  .why-copy { padding-left: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Iconos (sprite SVG) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2 .8 3.5 2.6 3.5 5.7"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v3a1 1 0 0 0 1 1h3l8 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M18.5 9a4 4 0 0 1 0 6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-9-9.5A5 5 0 0 1 12 7a5 5 0 0 1 9 3.5C19.5 15.4 12 20 12 20z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19z"/><path d="M14.5 6.5l3 3"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 2 2v9M10 3v7a2 2 0 0 1-2 2M6 3v0M18 21V3c-2.5 1.5-3.5 4.5-3.5 8H18"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 3L3 6l2.5 4L8 9v12h8V9l2.5 1L21 6l-5-3a4 4 0 0 1-8 0z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16v4M17 18h4"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5L11 20a2.1 2.1 0 0 1-3-3l8.5-8.5"/><path d="M14.5 6.5a4 4 0 0 1 5-4l-2.5 2.5.5 2 2 .5 2.5-2.5a4 4 0 0 1-4 5"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 1.5-2-.6-1.2.2-2.5 1.6-2.5H17a4 4 0 0 0 4-4C21 6.9 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7" r="1"/><circle cx="15" cy="8" r="1"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7.5L12 13l8.5-5.5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header" id="top">
+  <div class="container navbar">
+    <a class="logo" href="#inicio" aria-label="Impulsa Bosa, ir al inicio">
+      <span class="logo-mark">IB</span>
+      <span>Impulsa Bosa<small>MARKETING LOCAL · BOSA · BOGOTÁ</small></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+
+    <nav class="nav-links" id="menu" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#ayudamos">A quién ayudamos</a>
+      <a href="#contacto" class="nav-cta">Quiero impulsar mi negocio</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="kicker reveal"><span class="dot"></span>MARKETING LOCAL · BOSA · BOGOTÁ</p>
+        <h1 class="reveal" style="--d:.08s">Haz que tu negocio <span class="hl">se vea, conecte y venda.</span></h1>
+        <p class="hero-lead reveal" style="--d:.16s">Ayudamos a pequeños negocios a fortalecer su presencia digital con estrategias sencillas, creativas y accesibles.</p>
+        <div class="hero-actions reveal" style="--d:.24s">
+          <a class="btn btn-dark" href="#servicios">Conoce nuestros servicios <svg class="icon icon-arrow"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-primary" href="#contacto">Quiero impulsar mi negocio</a>
+        </div>
+        <div class="hero-stats reveal" style="--d:.32s">
+          <div class="stat"><svg class="icon"><use href="#i-target"/></svg><span><strong>100%</strong><small>Enfoque local</small></span></div>
+          <div class="stat"><svg class="icon"><use href="#i-users"/></svg><span><strong>3</strong><small>Áreas de apoyo</small></span></div>
+          <div class="stat"><svg class="icon"><use href="#i-trend"/></svg><span><strong>Objetivo:</strong><small>Crecer tu negocio</small></span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" style="--d:.2s">
+        <svg viewBox="0 0 540 520" role="img" aria-label="Ilustración de un celular con publicaciones de un negocio local y un gráfico de crecimiento">
+          <defs>
+            <linearGradient id="gPhone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#173761"/><stop offset="1" stop-color="#102544"/></linearGradient>
+            <linearGradient id="gAwn" x1="0" x2="1"><stop offset="0" stop-color="#ffb914"/><stop offset="1" stop-color="#ffd35c"/></linearGradient>
+            <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9efff"/><stop offset="1" stop-color="#eef8ff"/></linearGradient>
+          </defs>
+          <!-- fondo -->
+          <circle cx="280" cy="262" r="215" fill="url(#gSky)"/>
+          <circle cx="280" cy="262" r="160" fill="none" stroke="#bcdcf2" stroke-dasharray="3 9" stroke-linecap="round" stroke-width="2"/>
+          <!-- silueta de ciudad -->
+          <g fill="#c4dcec">
+            <rect x="70" y="360" width="46" height="110" rx="4"/><rect x="122" y="330" width="38" height="140" rx="4"/>
+            <rect x="420" y="345" width="44" height="125" rx="4"/><rect x="468" y="380" width="36" height="90" rx="4"/>
+          </g>
+          <!-- celular -->
+          <g>
+            <rect x="170" y="48" width="220" height="420" rx="34" fill="url(#gPhone)"/>
+            <rect x="180" y="58" width="200" height="400" rx="26" fill="#fff"/>
+            <rect x="244" y="66" width="72" height="14" rx="7" fill="#102544"/>
+            <!-- perfil -->
+            <circle cx="212" cy="116" r="20" fill="#102544"/>
+            <text x="212" y="121" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="13" fill="#ffb914">IB</text>
+            <rect x="242" y="102" width="86" height="10" rx="5" fill="#102544"/>
+            <rect x="242" y="120" width="60" height="8" rx="4" fill="#cfdcec"/>
+            <!-- local / fachada -->
+            <rect x="196" y="150" width="168" height="130" rx="16" fill="#eaf4ff"/>
+            <path d="M206 176h148l-8-26h-132z" fill="url(#gAwn)"/>
+            <rect x="214" y="194" width="62" height="86" rx="6" fill="#fff"/>
+            <rect x="222" y="202" width="46" height="34" rx="4" fill="#bfe3f3"/>
+            <rect x="286" y="194" width="60" height="50" rx="6" fill="#fff"/>
+            <circle cx="316" cy="214" r="11" fill="#17b8d0"/>
+            <path d="M310 214l4 4 8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- acciones -->
+            <g fill="none" stroke="#102544" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M205 306s-9-5.5-10.5-11a5.2 5.2 0 0 1 10.5-2 5.2 5.2 0 0 1 10.5 2C214 300.5 205 306 205 306z" fill="#ff5a5f" stroke="#ff5a5f"/>
+              <circle cx="238" cy="298" r="8"/>
+              <path d="M262 292l16 6-16 6 3-6z"/>
+            </g>
+            <rect x="196" y="322" width="150" height="9" rx="4.5" fill="#102544"/>
+            <rect x="196" y="340" width="110" height="8" rx="4" fill="#cfdcec"/>
+            <!-- grilla -->
+            <g fill="#dfeaf5"><rect x="196" y="366" width="50" height="50" rx="8"/><rect x="254" y="366" width="50" height="50" rx="8"/><rect x="312" y="366" width="50" height="50" rx="8"/></g>
+            <rect x="254" y="366" width="50" height="50" rx="8" fill="#ffb914"/>
+            <rect x="312" y="366" width="50" height="50" rx="8" fill="#17b8d0"/>
+          </g>
+
+          <!-- tarjeta: crecimiento -->
+          <g class="float-a">
+            <rect x="344" y="106" width="162" height="116" rx="20" fill="#fff" stroke="#e3e9f1"/>
+            <text x="362" y="136" font-family="DM Sans, sans-serif" font-weight="700" font-size="12" fill="#5b6b80">Crecimiento</text>
+            <g fill="#cfe9f3"><rect x="364" y="176" width="16" height="32" rx="4"/><rect x="390" y="162" width="16" height="46" rx="4"/></g>
+            <g fill="#17b8d0"><rect x="416" y="148" width="16" height="60" rx="4"/></g>
+            <rect x="442" y="134" width="16" height="74" rx="4" fill="#ffb914"/>
+            <path d="M362 170l30-14 26-6 40-18" fill="none" stroke="#102544" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 6"/>
+          </g>
+
+          <!-- tarjeta: clientes -->
+          <g class="float-b">
+            <rect x="8" y="176" width="190" height="76" rx="20" fill="#102544"/>
+            <circle cx="42" cy="214" r="18" fill="#ffffff1a"/>
+            <g fill="none" stroke="#ffb914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="42" cy="209" r="5"/><path d="M32 226c0-5 4-8 10-8s10 3 10 8"/>
+            </g>
+            <text x="72" y="208" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="15" fill="#fff">Más clientes</text>
+            <text x="72" y="227" font-family="DM Sans, sans-serif" font-size="11.5" fill="#bccadc">Conecta con tu barrio</text>
+          </g>
+
+          <!-- tarjeta: visibilidad -->
+          <g class="float-c">
+            <rect x="318" y="332" width="206" height="70" rx="20" fill="#fff" stroke="#e3e9f1"/>
+            <circle cx="352" cy="367" r="18" fill="#fff4d6"/>
+            <g fill="none" stroke="#b87800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M342 367s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="352" cy="367" r="2.6"/></g>
+            <text x="380" y="363" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="15" fill="#102544">Más visibilidad</text>
+            <text x="380" y="381" font-family="DM Sans, sans-serif" font-size="11.5" fill="#5b6b80">Bosa · Bogotá</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMESA -->
+  <div class="container promise">
+    <div class="promise-card reveal">
+      <div class="promise-item"><div class="round"><svg class="icon"><use href="#i-megaphone"/></svg></div><div><h3>Más visibilidad.</h3><p>Estrategias para que más personas encuentren tu negocio.</p></div></div>
+      <div class="promise-item"><div class="round"><svg class="icon"><use href="#i-users"/></svg></div><div><h3>Más clientes.</h3><p>Conecta con tu comunidad y convierte seguidores en clientes.</p></div></div>
+    </div>
+  </div>
+
+  <!-- 01 QUIÉNES SOMOS -->
+  <section class="section" id="nosotros">
+    <div class="container about-grid">
+      <div class="reveal">
+        <p class="eyebrow">01 · Quiénes somos</p>
+        <h2 class="section-title">Una solución pensada para el <em>comercio local.</em></h2>
+        <p class="section-desc">Impulsa Bosa es una propuesta de emprendimiento que busca acercar el marketing digital a pequeños negocios que tienen buenos productos o servicios, pero necesitan más visibilidad para llegar a nuevos clientes.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal" style="--d:.05s"><div class="card-icon"><svg class="icon"><use href="#i-target"/></svg></div><h3>Misión</h3><p>Brindar estrategias de marketing digital accesibles y efectivas para que los pequeños negocios de Bosa y Bogotá crezcan y sean más competitivos.</p></article>
+        <article class="card reveal" style="--d:.12s"><div class="card-icon cool"><svg class="icon"><use href="#i-eye"/></svg></div><h3>Visión</h3><p>Ser una agencia de marketing local líder en Bosa y Bogotá, reconocida por fortalecer negocios y aportar al desarrollo comunitario.</p></article>
+        <article class="card reveal" style="--d:.19s"><div class="card-icon warm"><svg class="icon"><use href="#i-heart"/></svg></div><h3>Valores</h3>
+          <ul class="values">
+            <li><svg class="icon"><use href="#i-check"/></svg>Cercanía</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Creatividad</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Compromiso</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Honestidad</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Resultados</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PROBLEMA -->
+  <section class="section problem" id="problema">
+    <div class="container problem-grid">
+      <div class="reveal">
+        <p class="eyebrow">02 · El problema y la oportunidad</p>
+        <h2 class="section-title">Muchos negocios tienen talento, pero <em>poca visibilidad.</em></h2>
+        <p class="section-desc">Algunos pequeños negocios tienen dificultades para crear contenido, manejar redes sociales, diferenciarse de la competencia y convertir seguidores en clientes.</p>
+        <div class="problem-list">
+          <div class="problem-item"><b>01</b>Redes sociales sin una estrategia clara.</div>
+          <div class="problem-item"><b>02</b>Poco tiempo o conocimiento para crear contenido.</div>
+          <div class="problem-item"><b>03</b>Presupuestos limitados para publicidad.</div>
+          <div class="problem-item"><b>04</b>Dificultad para destacar frente a competidores.</div>
+        </div>
+      </div>
+      <div class="gap-card reveal" style="--d:.12s">
+        <p class="eyebrow">La brecha</p>
+        <h3>Buen producto, pero pocas personas lo conocen.</h3>
+        <p>Un negocio con talento necesita que su comunidad lo encuentre y lo recuerde.</p>
+        <div class="gap-flow">
+          <div class="gap-row bad"><svg class="icon"><use href="#i-eye"/></svg>Poca visibilidad<span class="tag">Hoy</span></div>
+          <div class="gap-row"><svg class="icon"><use href="#i-compass"/></svg>Diagnóstico, contenido y orientación<span class="tag">Con Impulsa Bosa</span></div>
+          <div class="gap-row good"><svg class="icon"><use href="#i-trend"/></svg>Más clientes y reconocimiento<span class="tag">Meta</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 QUÉ HACEMOS -->
+  <section class="section" id="que-hacemos">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">03 · Qué hacemos</p>
+        <h2 class="section-title">Así ayudamos a crecer a los <em>pequeños negocios.</em></h2>
+      </div>
+      <div class="solution reveal">
+        <div>
+          <p class="eyebrow on-dark">Nuestra solución</p>
+          <h3>Convertir el marketing en una herramienta accesible.</h3>
+          <p>Combinamos diagnóstico, contenido y orientación digital para que cada negocio pueda comunicar mejor su propuesta de valor y aprovechar los canales digitales.</p>
+          <div class="pill"><svg class="icon"><use href="#i-bulb"/></svg>Innovación frugal: más valor con recursos disponibles</div>
+        </div>
+        <div class="how-list">
+          <div class="how-item"><svg class="icon"><use href="#i-compass"/></svg><span>Diagnóstico<small>Entendemos tu negocio</small></span></div>
+          <div class="how-item"><svg class="icon"><use href="#i-pen"/></svg><span>Contenido<small>Comunicamos tu propuesta de valor</small></span></div>
+          <div class="how-item"><svg class="icon"><use href="#i-share"/></svg><span>Orientación digital<small>Aprovechamos los canales digitales</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios" style="padding-top:0">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Servicios</p>
+        <h2 class="section-title">Servicios para empezar a <em>crecer.</em></h2>
+        <p class="section-desc">Soluciones que pueden adaptarse al tamaño y presupuesto de cada emprendimiento.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service reveal">
+          <div class="service-top"><div class="service-icon"><svg class="icon"><use href="#i-share"/></svg></div><span class="number">01</span></div>
+          <h3>Redes sociales</h3>
+          <p>Organización de perfiles, calendario de publicaciones y recomendaciones para mejorar la presencia digital.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Optimización del perfil</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Calendario de contenido</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Ideas para publicaciones</li>
+          </ul>
+        </article>
+        <article class="service featured reveal" style="--d:.1s">
+          <div class="service-top"><div class="service-icon"><svg class="icon"><use href="#i-sparkle"/></svg></div><span class="number">02</span></div>
+          <h3>Contenido creativo</h3>
+          <p>Diseño de piezas visuales y mensajes que comuniquen el valor del negocio de forma clara y atractiva.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Posts e historias</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Copys publicitarios</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Identidad visual básica</li>
+          </ul>
+        </article>
+        <article class="service reveal" style="--d:.2s">
+          <div class="service-top"><div class="service-icon"><svg class="icon"><use href="#i-compass"/></svg></div><span class="number">03</span></div>
+          <h3>Estrategia digital</h3>
+          <p>Orientación para definir objetivos, público, propuesta de valor y acciones de promoción.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Público objetivo</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Objetivos medibles</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Seguimiento de resultados</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 A QUIÉN AYUDAMOS -->
+  <section class="section audience" id="ayudamos">
+    <div class="container audience-grid">
+      <div class="reveal">
+        <p class="eyebrow">04 · A quién ayudamos</p>
+        <h2 class="section-title">Pequeños negocios de <em>Bosa y Bogotá.</em></h2>
+        <p class="section-desc">Nos enfocamos especialmente en emprendimientos con presupuestos reducidos que quieren conseguir mayor reconocimiento y ventas usando canales digitales.</p>
+        <div class="tags">
+          <span class="tag-chip"><svg class="icon"><use href="#i-utensils"/></svg>Gastronomía</span>
+          <span class="tag-chip"><svg class="icon"><use href="#i-shirt"/></svg>Moda</span>
+          <span class="tag-chip"><svg class="icon"><use href="#i-sparkle"/></svg>Belleza</span>
+          <span class="tag-chip"><svg class="icon"><use href="#i-wrench"/></svg>Servicios</span>
+          <span class="tag-chip"><svg class="icon"><use href="#i-palette"/></svg>Creativos</span>
+          <span class="tag-chip"><svg class="icon"><use href="#i-bag"/></svg>Comercio</span>
+        </div>
+      </div>
+      <div class="target reveal" style="--d:.12s">
+        <div class="target-pin"><svg class="icon"><use href="#i-pin"/></svg></div>
+        <h3>TERRITORIO INICIAL</h3>
+        <strong>Bosa → Bogotá</strong>
+        <p>Comenzamos desde lo local para construir soluciones cercanas y escalables.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 PROCESO -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">05 · Cómo funciona</p>
+        <h2 class="section-title">Un proceso simple en <em>4 pasos.</em></h2>
+      </div>
+      <div class="process">
+        <div class="step reveal"><b>1</b><h3>Diagnóstico</h3><p>Conocemos el negocio, sus clientes y sus necesidades.</p></div>
+        <div class="step reveal" style="--d:.08s"><b>2</b><h3>Estrategia</h3><p>Definimos objetivos, mensaje y canales prioritarios.</p></div>
+        <div class="step reveal" style="--d:.16s"><b>3</b><h3>Creación</h3><p>Desarrollamos contenido y acciones promocionales.</p></div>
+        <div class="step reveal" style="--d:.24s"><b>4</b><h3>Medición</h3><p>Revisamos resultados y proponemos mejoras.</p></div>
+      </div>
+
+      <div class="metrics reveal">
+        <p class="metrics-title">Qué medimos</p>
+        <div class="metric-grid">
+          <div class="metric"><strong>Alcance</strong><span>¿Cuántas personas conocen el negocio?</span></div>
+          <div class="metric"><strong>Interacción</strong><span>¿Qué contenido genera interés?</span></div>
+          <div class="metric"><strong>Conversión</strong><span>¿Cuántos contactos llegan a ser clientes?</span></div>
+          <div class="metric"><strong>Fidelización</strong><span>¿Cómo logramos que regresen?</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 POR QUÉ -->
+  <section class="section why" id="por-que">
+    <div class="container why-grid">
+      <div class="reveal">
+        <p class="eyebrow">06 · ¿Por qué escogimos este proyecto?</p>
+        <h2 class="section-title">Porque el crecimiento digital también debe ser para <em>los pequeños.</em></h2>
+      </div>
+      <div class="why-copy reveal" style="--d:.1s">
+        <p>Elegimos este proyecto porque los pequeños emprendimientos hacen parte importante de la economía local y, con herramientas digitales adecuadas, pueden aumentar su visibilidad sin necesitar grandes inversiones.</p>
+        <p>Además, el proyecto identifica una necesidad real, propone una solución viable y busca generar valor económico y social en la comunidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 CONTACTO -->
+  <section class="section contact" id="contacto">
+    <div class="container">
+      <div class="contact-card reveal">
+        <div class="contact-copy">
+          <p class="eyebrow on-dark">07 · Únete al impulso</p>
+          <h2>¿Listo para darle más visibilidad a tu negocio?</h2>
+          <p>Cuéntanos qué haces y te ayudamos a identificar una primera acción de marketing.</p>
+          <div class="contact-mail">
+            <div class="round"><svg class="icon"><use href="#i-mail"/></svg></div>
+            <div><small>Escríbenos a</small><a href="mailto:impulsabosa@gmail.com" id="mail-link">impulsabosa@gmail.com</a></div>
+            <button class="copy-btn" type="button" id="copy-mail"><svg class="icon"><use href="#i-copy"/></svg><span>Copiar</span></button>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <h3>Cuéntanos de tu negocio</h3>
+          <p>Al enviar, se abrirá tu correo con el mensaje ya redactado.</p>
+          <div class="field-row">
+            <div class="field"><label for="f-nombre">Tu nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-negocio">Nombre del negocio</label><input id="f-negocio" name="negocio" type="text" autocomplete="organization" required></div>
+          </div>
+          <div class="field"><label for="f-mensaje">¿Qué haces y en qué te podemos ayudar?</label><textarea id="f-mensaje" name="mensaje" required></textarea></div>
+          <button class="btn btn-primary" type="submit">Enviar mensaje <svg class="icon"><use href="#i-send"/></svg></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-mark">IB</span><span>Impulsa Bosa<small>MARKETING LOCAL · BOSA · BOGOTÁ</small></span></div>
+        <p>Marketing accesible para pequeños negocios.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="copy"><span>© 2026 Impulsa Bosa · Proyecto académico de emprendimiento</span></div>
+  </div>
+</footer>
+
+<button class="to-top" type="button" id="to-top" aria-label="Volver arriba"><svg class="icon"><use href="#i-up"/></svg></button>
+
+<script>
+(function () {
+  'use strict';
+
+  var EMAIL = 'impulsabosa@gmail.com';
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* ---------- Header: sombra al hacer scroll + botón volver arriba ---------- */
+  var header = $('.site-header');
+  var toTop = $('#to-top');
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    header.classList.toggle('scrolled', y > 8);
+    toTop.classList.toggle('show', y > 700);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  /* ---------- Menú móvil ---------- */
+  var toggle = $('.menu-toggle');
+  var menu = $('#menu');
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  }
+  toggle.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+  $$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('click', function (e) {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
+  });
+  window.matchMedia('(min-width: 861px)').addEventListener('change', function () { setMenu(false); });
+
+  /* ---------- Enlace activo según la sección visible ---------- */
+  var links = $$('.nav-links a[href^="#"]:not(.nav-cta)');
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  var sections = ['inicio', 'nosotros', 'servicios', 'proceso', 'ayudamos'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (l) { l.classList.remove('active'); });
+          if (map[en.target.id]) map[en.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- Animaciones de entrada ---------- */
+  var reveals = $$('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- Copiar correo ---------- */
+  var copyBtn = $('#copy-mail');
+  copyBtn.addEventListener('click', function () {
+    var label = $('span', copyBtn);
+    function done(ok) {
+      label.textContent = ok ? '¡Copiado!' : 'Copia manualmente';
+      setTimeout(function () { label.textContent = 'Copiar'; }, 2000);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(EMAIL).then(function () { done(true); }, function () { done(false); });
+    } else {
+      var t = document.createElement('textarea');
+      t.value = EMAIL; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+      document.body.removeChild(t);
+      done(ok);
+    }
+  });
+
+  /* ---------- Formulario: abre el correo con el mensaje redactado ---------- */
+  var form = $('#contact-form');
+  var status = $('#form-status');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nombre = form.nombre.value.trim();
+    var negocio = form.negocio.value.trim();
+    var mensaje = form.mensaje.value.trim();
+
+    if (!nombre || !negocio || !mensaje) {
+      status.className = 'form-status error';
+      status.textContent = 'Por favor completa los tres campos.';
+      (!nombre ? form.nombre : !negocio ? form.negocio : form.mensaje).focus();
+      return;
+    }
+    var subject = 'Quiero impulsar mi negocio: ' + negocio;
+    var body = 'Hola, equipo de Impulsa Bosa:\n\nMi nombre es ' + nombre + ' y mi negocio se llama ' + negocio + '.\n\n' + mensaje + '\n\nQuedo atento(a). Gracias.';
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    status.className = 'form-status';
+    status.textContent = 'Abrimos tu correo para que envíes el mensaje. Si no se abre, escríbenos a ' + EMAIL + '.';
+  });
+})();
+
+</script>
+</body>
+</html>
